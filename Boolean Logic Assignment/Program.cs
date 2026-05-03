@@ -11,18 +11,17 @@ namespace Boolean_Logic_Assignment
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the car insurance eligibility checker!");
-            Console.WriteLine("What is your age?");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Have you ever had a DUI (True or False");
-            bool hasDUI = Convert.ToBoolean(Console.ReadLine());
-            Console.WriteLine("How many speeding tickets do you have?");
-            int speedingTickets = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Welcome to the car insurance eligibility checker!"); // Welcome message
+            Console.WriteLine("What is your age now?"); // Ask for age
+            int age = Convert.ToInt32(Console.ReadLine());  // Convert age input to integer
+            Console.WriteLine("Have you ever had a DUI (True or False)"); // Ask about DUI
+            bool hasDUI = Convert.ToBoolean(Console.ReadLine()); // Convert DUI input to boolean
+            Console.WriteLine("How many speeding tickets do you have?"); // Ask for number of speeding tickets
+            int speedingTickets = Convert.ToInt32(Console.ReadLine()); // Convert speeding tickets input to integer
+            bool isEligible = (age > 15 && !hasDUI && speedingTickets <= 3);// Determine eligibility based on age, DUI, and speeding tickets
+            Console.WriteLine("Are you eligible? " + isEligible);// Output eligibility result
 
-            bool isEligible = (age > 15 && !hasDUI && speedingTickets <= 3);
-            Console.WriteLine("Are you eligible? " + isEligible);
-
-            Console.ReadLine();
+            Console.ReadLine(); // Wait for user input before closing the console
         }
     }
 }
